@@ -32,4 +32,4 @@ repos:
         files: ^backend/
         pass_filenames: false
         always_run: true
-        verbose: true
+        verbose: true 
