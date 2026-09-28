@@ -1,0 +1,49 @@
+[project]
+name = "nomeRepositorio"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "FagundesMatheus",email = "fagundes2@discente.ufg.br"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "sqlalchemy (>=2.0.51,<3.0.0)",
+    "fastapi (>=0.139.2,<0.140.0)",
+    "uvicorn[standard] (>=0.51.0,<0.52.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "nomeProjeto", from = "src" },
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.6.0,<5.0.0)",
+    "gitlint (>=0.19.1,<0.20.0)",
+    "ruff (>=0.15.20,<0.16.0)",
+    "mypy (>=2.1.0,<3.0.0)",
+    "pytest (>=9.1.1,<10.0.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)"
+]
+[tool.ruff]
+line-length = 120
+exclude = [".git", ".venv", "venv", "__pycache__"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+addopts = "--cov=nomeProjeto --cov-report=term-missing"
+
+[tool.coverage.run]
+omit = ["tests/*"]

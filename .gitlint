@@ -1,0 +1,10 @@
+[general]
+# Automatically ignores merge or revert commits
+ignore=merge-commits,revert-commits,body-is-missing
+
+# Uses the community convention
+contrib=contrib-title-conventional-commits
+
+[contrib-title-conventional-commits]
+# Allowed commit types
+types=build,chore,ci,docs,feat,fix,perf,refactor,revert,style,test

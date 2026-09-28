@@ -1,0 +1,14 @@
+/.venv/
+/.idea
+/backend/.venv/
+/backend/.mypy_cache/
+/backend/.ruff_cache/
+/backend/.pytest_cache/
+/backend/.coverage
+/backend/src/nomeProjeto/__pycache__
+/backend/src/nomeProjeto/application/__pycache__
+*.pyc
+backend/tests/.coverage
+*.coverage
+/frontend/.vscode
+*.bat
